@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Bakery Application</string>
+    <string name="login">Enter your login information</string>
+    <string name="enter_a_username">Enter Username</string>
+    <string name="enter_a_pass">Enter Password</string>
+    <string name="enter_log">Login</string>
+    <string name="Alt_log">If you don\'t have an account: </string>
+    <string name="create_log">Create account</string>
+
 </resources>
