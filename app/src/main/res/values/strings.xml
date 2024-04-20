@@ -7,10 +7,12 @@
     <string name="Alt_log">If you don\'t have an account: </string>
     <string name="create_log">Create account</string>
     <string name="user_greet">Welcome, </string>
-    <string name="admin_button">Admin</string>
+    <string name="admin_button">Admin Settings</string>
     <string name="admin_page">Admin Settings</string>
     <string name="view_customer_order">View Order history</string>
     <string name="view_customer_info">View User Information</string>
     <string name="logout">Logout</string>
+    <string name="food_page">Food Menu</string>
+    <string name="drink_page">Drink Menu</string>
 
 </resources>
