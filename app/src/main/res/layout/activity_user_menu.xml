@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Menu">
+
+    <TextView
+        android:id="@+id/userGreeting"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="@string/user_greet"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="125dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="568dp"
+        android:background="#00FFFCFC"
+        android:onClick="logout"
+        android:text="@string/logout"
+        android:textColor="#5A5656"
+        android:textColorHighlight="#727070"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
