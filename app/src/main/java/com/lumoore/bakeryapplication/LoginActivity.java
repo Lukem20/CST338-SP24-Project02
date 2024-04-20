@@ -56,11 +56,22 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser() {
+        if (isValidFieldValue()) {
 
+        }
     }
 
     private void createUser() {
+        if (isValidFieldValue()) {
 
+        }
+    }
+
+    private boolean isValidFieldValue() {
+        if (!username.isEmpty() && !password.isEmpty()) {
+            return true;
+        }
+        return false;
     }
 
     private void getEnteredLoginInformation() {

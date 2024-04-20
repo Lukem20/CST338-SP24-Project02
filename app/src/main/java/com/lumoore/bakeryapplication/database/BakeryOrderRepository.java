@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.Log;
 
 import com.lumoore.bakeryapplication.database.entities.BakeryOrder;
+import com.lumoore.bakeryapplication.database.entities.User;
 
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
@@ -12,6 +13,7 @@ import java.util.concurrent.Future;
 
 public class BakeryOrderRepository {
     private BakeryOrderDAO bakeryOrderDAO;
+    private UserDAO userDAO;
     private ArrayList<BakeryOrder> allOrders;
     // Singleton repository
     private static BakeryOrderRepository repository;
@@ -19,6 +21,7 @@ public class BakeryOrderRepository {
     private BakeryOrderRepository(Application application) {
         BakeryOrderDatabase db = BakeryOrderDatabase.getDatabase(application);
         this.bakeryOrderDAO = db.bakeryDAO();
+        this.userDAO = db.userDAO();
         this.allOrders = (ArrayList<BakeryOrder>) this.bakeryOrderDAO.getAllRecords();
     }
 
@@ -73,6 +76,12 @@ public class BakeryOrderRepository {
     public void insertBakeryOrder (BakeryOrder order) {
         BakeryOrderDatabase.dbWriteExecutor.execute(() -> {
             bakeryOrderDAO.insert(order);
+        });
+    }
+
+    public void insertUser (User... user) {
+        BakeryOrderDatabase.dbWriteExecutor.execute(() -> {
+            userDAO.insert(user);
         });
     }
 }

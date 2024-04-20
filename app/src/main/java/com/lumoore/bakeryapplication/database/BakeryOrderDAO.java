@@ -14,7 +14,7 @@ public interface BakeryOrderDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(BakeryOrder orderRecordItem);
 
-    @Query("Select * from " + BakeryOrderDatabase.BAKERY_ORDER_TABLE)
+    @Query("SELECT * FROM " + BakeryOrderDatabase.BAKERY_ORDER_TABLE + " ORDER BY orderDate ASC")
     List<BakeryOrder> getAllRecords();
 
 }

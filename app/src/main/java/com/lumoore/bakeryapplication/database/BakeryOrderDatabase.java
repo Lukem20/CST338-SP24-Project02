@@ -10,6 +10,7 @@ import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.lumoore.bakeryapplication.database.entities.BakeryOrder;
+import com.lumoore.bakeryapplication.database.entities.User;
 import com.lumoore.bakeryapplication.database.typeConverters.LocalDateTypeConverter;
 
 import java.util.concurrent.ExecutorService;
@@ -17,8 +18,9 @@ import java.util.concurrent.Executors;
 
 
 @TypeConverters(LocalDateTypeConverter.class)
-@Database(entities = {BakeryOrder.class}, version = 1, exportSchema = false)
+@Database(entities = {BakeryOrder.class, User.class}, version = 3, exportSchema = false)
 public abstract class BakeryOrderDatabase extends RoomDatabase {
+    public static final String USER_TABLE = "user_table";
     private static final String DATABASE_NAME = "Bakery_database";
     public static final String BAKERY_ORDER_TABLE = "bakeryOrder";
     private static volatile BakeryOrderDatabase INSTANCE;
@@ -44,10 +46,19 @@ public abstract class BakeryOrderDatabase extends RoomDatabase {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
-            // TODO: add databaseWriteExecutor.execute(() -> { ... })
-            // THIS IS WHERE WE WILL ADD DEFAULT USERS & ADMIN
+            dbWriteExecutor.execute(() -> {
+                UserDAO dao = INSTANCE.userDAO();
+                dao.deleteAll();
+                User admin1 = new User("admin1", "admin1");
+                admin1.setAdmin(true);
+                dao.insert(admin1);
+
+                User testUser1 = new User("testuser1", "testuser1");
+                dao.insert(testUser1);
+            });
         }
     };
 
     public abstract BakeryOrderDAO bakeryDAO();
+    public abstract UserDAO userDAO();
 }
