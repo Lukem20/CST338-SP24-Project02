@@ -7,7 +7,7 @@ import androidx.room.Query;
 
 import com.lumoore.bakeryapplication.database.entities.Bakery;
 
-import java.util.List;
+import java.util.ArrayList;
 
 @Dao
 public interface BakeryDAO {
@@ -15,7 +15,7 @@ public interface BakeryDAO {
     void insert(Bakery orderRecordItem);
 
     @Query("Select * from " + BakeryDatabase.BAKERTY_TABLE)
-    List<Bakery> getAllRecrods();
+    ArrayList<Bakery> getAllRecrods();
 
 
 }
