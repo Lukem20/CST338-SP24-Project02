@@ -1,26 +1,23 @@
 package com.lumoore.bakeryapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.room.PrimaryKey;
 
+import com.lumoore.bakeryapplication.database.BakeryOrderRepository;
 import com.lumoore.bakeryapplication.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
     @PrimaryKey
-    int ID;
-    String usrnme = "";
-    String psswrd = "";
+    String username = "";
+    String password = "";
 
-    ActivityLoginBinding binding;
+    private ActivityLoginBinding binding;
+    private BakeryOrderRepository repository;
+
 
 
     @Override
@@ -29,25 +26,46 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // =-=-= Get access to DB =-=-=
+        repository = BakeryOrderRepository.getRepository(getApplication());
+
         binding.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(LoginActivity.this, "Login button", Toast.LENGTH_SHORT).show();
                 getEnteredLoginInformation();
+                loginUser();
             }
 
+//            @Override
+//            public boolean onClick(View v) {
+//                Intent intent = new User_Menu(getApplicationContext());
+//                startActivity(intent);
+//                return false;
+//            }
+        });
+
+        binding.createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onClick(View v) {
-                Intent intent = new User_Menu(getApplicationContext());
-                startActivity(intent);
-                return false;
+            public void onClick(View v) {
+                Toast.makeText(LoginActivity.this, "Create Account button", Toast.LENGTH_SHORT).show();
+                getEnteredLoginInformation();
+                createUser();
             }
         });
     }
 
+    private void loginUser() {
+
+    }
+
+    private void createUser() {
+
+    }
+
     private void getEnteredLoginInformation() {
-        usrnme = binding.userEdit.getText().toString();
-        psswrd = binding.passEdit.getText().toString();
+        username = binding.userEdit.getText().toString();
+        password = binding.passEdit.getText().toString();
     }
 }
 

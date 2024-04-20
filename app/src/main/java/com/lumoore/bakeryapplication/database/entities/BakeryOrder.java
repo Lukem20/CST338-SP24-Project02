@@ -2,13 +2,14 @@ package com.lumoore.bakeryapplication.database.entities;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import com.lumoore.bakeryapplication.database.BakeryDatabase;
+import com.lumoore.bakeryapplication.database.BakeryOrderDatabase;
+import com.lumoore.bakeryapplication.database.BakeryOrderDatabase;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
-@Entity(tableName = BakeryDatabase.BAKERTY_TABLE)
-public class Bakery {
+@Entity(tableName = BakeryOrderDatabase.BAKERY_ORDER_TABLE)
+public class BakeryOrder {
     @PrimaryKey(autoGenerate = true)
     private int orderID;
     private int customerID;
@@ -16,22 +17,35 @@ public class Bakery {
     private int foodCount;
     private String drinkName;
     private int drinkCount;
-    private LocalDate orderDate;
+    private LocalDateTime orderDate;
 
-    public Bakery(int customerID, String foodName, int foodCount, String drinkName, int drinkCount) {
+    public BakeryOrder(int customerID, String foodName, int foodCount, String drinkName, int drinkCount) {
         this.customerID = customerID;
         this.foodName = foodName;
         this.foodCount = foodCount;
         this.drinkName = drinkName;
         this.drinkCount = drinkCount;
-        this.orderDate = LocalDate.now();
+        this.orderDate = LocalDateTime.now();
+    }
+
+    @Override
+    public String toString() {
+        return "Bakery{" +
+                "orderID=" + orderID +
+                ", customerID=" + customerID +
+                ", foodName='" + foodName + '\'' +
+                ", foodCount=" + foodCount +
+                ", drinkName='" + drinkName + '\'' +
+                ", drinkCount=" + drinkCount +
+                ", orderDate=" + orderDate +
+                '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Bakery bakery = (Bakery) o;
+        BakeryOrder bakery = (BakeryOrder) o;
         return customerID == bakery.customerID && foodCount == bakery.foodCount && drinkCount == bakery.drinkCount && orderID == bakery.orderID && orderDate == bakery.orderDate && Objects.equals(foodName, bakery.foodName) && Objects.equals(drinkName, bakery.drinkName);
     }
 
@@ -88,11 +102,11 @@ public class Bakery {
         this.orderID = orderID;
     }
 
-    public LocalDate getOrderDate() {
+    public LocalDateTime getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(LocalDate orderDate) {
+    public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
     }
 }
