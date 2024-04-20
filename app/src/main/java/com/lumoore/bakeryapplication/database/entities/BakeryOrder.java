@@ -30,15 +30,14 @@ public class BakeryOrder {
 
     @Override
     public String toString() {
-        return "Bakery{" +
-                "orderID=" + orderID +
-                ", customerID=" + customerID +
-                ", foodName='" + foodName + '\'' +
-                ", foodCount=" + foodCount +
-                ", drinkName='" + drinkName + '\'' +
-                ", drinkCount=" + drinkCount +
-                ", orderDate=" + orderDate +
-                '}';
+        return "Bakery Order:" + "\n" +
+                "orderID: " + orderID + "\n" +
+                "customerID: " + customerID + "\n" +
+                "\n" +"=-=-= ITEMS =-=-=" + "\n" +
+                foodName + '\'' + foodCount + "\n" +
+                drinkName + '\'' + drinkCount + "\n" +
+                "\n" + "=-=-= ORDER DATE =-=-=" + "\n" +
+                orderDate;
     }
 
     @Override
