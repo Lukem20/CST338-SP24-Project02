@@ -5,6 +5,68 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F6F6F6"
     tools:context=".admin_page">
+
+  <TextView
+      android:id="@+id/adminPage"
+      android:layout_width="250dp"
+      android:layout_height="75dp"
+      android:layout_marginTop="100dp"
+      android:gravity="center"
+      android:text="@string/admin_page"
+      android:textColor="#050505"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+      android:id="@+id/OHButton"
+      android:layout_width="192dp"
+      android:layout_height="111dp"
+      android:layout_marginTop="256dp"
+      android:onClick="display_order_history"
+      android:text="@string/view_customer_order"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+      android:id="@+id/UInfoButton"
+      android:layout_width="192dp"
+      android:layout_height="111dp"
+      android:layout_marginTop="448dp"
+      android:onClick="display_user_info"
+      android:text="@string/view_customer_info"
+      android:textSize="24sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <Button
+      android:id="@+id/goBack"
+      android:layout_width="149dp"
+      android:layout_height="67dp"
+      android:layout_marginTop="4dp"
+      android:background="#00FFFCFC"
+      android:onClick="goBack"
+      android:text="Go Back"
+      android:textColor="#100D0D"
+      android:textColorHighlight="#000000"
+      android:textSize="20sp"
+      android:textStyle="bold|italic"
+      app:icon="@android:drawable/ic_menu_revert"
+      app:iconSize="30dp"
+      app:iconTint="#070505"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.019"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
