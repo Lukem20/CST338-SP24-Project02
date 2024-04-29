@@ -14,5 +14,7 @@
     <string name="logout">Logout</string>
     <string name="food_page">Food Menu</string>
     <string name="drink_page">Drink Menu</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="edit_menu_items">Edit Menu Items</string>
 
 </resources>
