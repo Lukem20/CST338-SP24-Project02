@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F6F6"
-    tools:context=".admin_page">
+    tools:context=".AdminActivity">
 
   <TextView
       android:id="@+id/adminPage"
@@ -23,10 +23,10 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <Button
-      android:id="@+id/OHButton"
+      android:id="@+id/OrderHistoryButton"
       android:layout_width="192dp"
       android:layout_height="111dp"
-      android:layout_marginTop="256dp"
+      android:layout_marginTop="216dp"
       android:onClick="display_order_history"
       android:text="@string/view_customer_order"
       android:textSize="24sp"
@@ -36,10 +36,10 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <Button
-      android:id="@+id/UInfoButton"
+      android:id="@+id/UserInfoButton"
       android:layout_width="192dp"
       android:layout_height="111dp"
-      android:layout_marginTop="448dp"
+      android:layout_marginTop="380dp"
       android:onClick="display_user_info"
       android:text="@string/view_customer_info"
       android:textSize="24sp"
@@ -49,13 +49,28 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <Button
+      android:id="@+id/EditMenuButton"
+      android:layout_width="192dp"
+      android:layout_height="111dp"
+      android:onClick="edit_menu"
+      android:text="@string/edit_menu_items"
+      android:textSize="24sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.874"
+      />
+
+  <Button
       android:id="@+id/goBack"
-      android:layout_width="149dp"
+      android:layout_width="170dp"
       android:layout_height="67dp"
       android:layout_marginTop="4dp"
       android:background="#00FFFCFC"
       android:onClick="goBack"
-      android:text="Go Back"
+      android:text="@string/back_to_login"
       android:textColor="#100D0D"
       android:textColorHighlight="#000000"
       android:textSize="20sp"
