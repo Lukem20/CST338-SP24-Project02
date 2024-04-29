@@ -14,10 +14,8 @@ public class LoginActivity extends AppCompatActivity {
     @PrimaryKey
     String username = "";
     String password = "";
-
     private ActivityLoginBinding binding;
     private BakeryOrderRepository repository;
-
 
 
     @Override
@@ -34,15 +32,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(LoginActivity.this, "Login button", Toast.LENGTH_SHORT).show();
                 getEnteredLoginInformation();
-                loginUser();
+                loginUser(v);
             }
-
-//            @Override
-//            public boolean onClick(View v) {
-//                Intent intent = new User_Menu(getApplicationContext());
-//                startActivity(intent);
-//                return false;
-//            }
         });
 
         binding.createAcc.setOnClickListener(new View.OnClickListener() {
@@ -50,20 +41,23 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(LoginActivity.this, "Create Account button", Toast.LENGTH_SHORT).show();
                 getEnteredLoginInformation();
-                createUser();
+                createAccount(v);
             }
         });
     }
 
-    private void loginUser() {
+    public void loginUser(View view) {
         if (isValidFieldValue()) {
-
+            // Check if the value in 'username' exists in the database
+            // If it is already in database, check if the password matches that entry.
         }
     }
 
-    private void createUser() {
+    public void createAccount(View view) {
         if (isValidFieldValue()) {
-
+            // Check if the value in 'username' exists in the database
+            // If it is already in database, try again.
+            // Else add new entry to database with 'username' & 'password'
         }
     }
 
