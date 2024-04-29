@@ -1,4 +1,4 @@
-package com.lumoore.bakeryapplication;
+package com.lumoore.bakeryapplication.adminUserActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityOrderHistoryBinding;
 
 public class OrderHistoryActivity extends AppCompatActivity {
