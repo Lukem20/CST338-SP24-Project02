@@ -1,5 +1,6 @@
 package com.lumoore.bakeryapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -33,6 +34,9 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Login button", Toast.LENGTH_SHORT).show();
                 getEnteredLoginInformation();
                 loginUser(v);
+
+                Intent intent = MainActivity.MainIntentFactory(getApplicationContext());
+                startActivity(intent);
             }
         });
 
@@ -42,6 +46,9 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Create Account button", Toast.LENGTH_SHORT).show();
                 getEnteredLoginInformation();
                 createAccount(v);
+
+                Intent intent = MainActivity.MainIntentFactory(getApplicationContext());
+                startActivity(intent);
             }
         });
     }
@@ -50,6 +57,10 @@ public class LoginActivity extends AppCompatActivity {
         if (isValidFieldValue()) {
             // Check if the value in 'username' exists in the database
             // If it is already in database, check if the password matches that entry.
+            // if (user is admin) {
+                    Intent intent = AdminActivity.AdminIntentFactory(getApplicationContext());
+                    startActivity(intent);
+            // }
         }
     }
 
@@ -61,6 +72,11 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *  Checks if the values that were entered and stored in Username & Password
+     *  text fields are valid values
+     * @return true if valid, false if not
+     */
     private boolean isValidFieldValue() {
         if (!username.isEmpty() && !password.isEmpty()) {
             return true;
@@ -68,9 +84,11 @@ public class LoginActivity extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * Stores the values entered in the Username & Password text field
+     */
     private void getEnteredLoginInformation() {
         username = binding.userEdit.getText().toString();
         password = binding.passEdit.getText().toString();
     }
 }
-

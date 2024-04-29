@@ -1,5 +1,6 @@
 package com.lumoore.bakeryapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -45,6 +46,11 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
     }
+
+    public static Intent AdminIntentFactory(Context context) {
+        return new Intent(context, AdminActivity.class);
+    }
+
 
     public void edit_menu(View view) {
 
