@@ -22,7 +22,7 @@
             android:name=".adminUserActivities.OrderHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".User_Menu"
+            android:name=".UserActivity"
             android:exported="false" />
         <activity
             android:name=".AdminActivity"

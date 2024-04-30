@@ -16,5 +16,7 @@
     <string name="drink_page">Drink Menu</string>
     <string name="back_to_login">Back to Login</string>
     <string name="edit_menu_items">Edit Menu Items</string>
+    <string name="enter">Enter</string>
+    <string name="welcome_to_the_bakery_app">Welcome to the Bakery App!</string>
 
 </resources>

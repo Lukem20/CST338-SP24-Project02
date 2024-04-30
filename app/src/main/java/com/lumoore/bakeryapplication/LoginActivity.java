@@ -1,5 +1,6 @@
 package com.lumoore.bakeryapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -34,9 +35,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Login button", Toast.LENGTH_SHORT).show();
                 getEnteredLoginInformation();
                 loginUser(v);
-
-                Intent intent = MainActivity.MainIntentFactory(getApplicationContext());
-                startActivity(intent);
             }
         });
 
@@ -46,21 +44,25 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Create Account button", Toast.LENGTH_SHORT).show();
                 getEnteredLoginInformation();
                 createAccount(v);
-
-                Intent intent = MainActivity.MainIntentFactory(getApplicationContext());
-                startActivity(intent);
             }
         });
+    }
+
+    public static Intent LoginIntentFactory(Context context) {
+        return new Intent(context, LoginActivity.class);
     }
 
     public void loginUser(View view) {
         if (isValidFieldValue()) {
             // Check if the value in 'username' exists in the database
             // If it is already in database, check if the password matches that entry.
-            // if (user is admin) {
+             if (true) { // IF USER IS ADMIN
                     Intent intent = AdminActivity.AdminIntentFactory(getApplicationContext());
                     startActivity(intent);
-            // }
+             } else {
+                    Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
+                    startActivity(intent);
+            }
         }
     }
 
