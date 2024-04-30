@@ -26,5 +26,7 @@
     <string name="drinks_menu">Drinks Menu</string>
     <string name="edit_drinks_menu">Edit Drinks Menu</string>
     <string name="edit_food_menu">Edit Food Menu</string>
+    <string name="view_cart">View Cart</string>
+    <string name="checkout">Checkout</string>
 
 </resources>
