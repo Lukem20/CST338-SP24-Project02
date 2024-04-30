@@ -12,7 +12,7 @@
       android:id="@+id/adminPage"
       android:layout_width="250dp"
       android:layout_height="75dp"
-      android:layout_marginTop="100dp"
+      android:layout_marginTop="60dp"
       android:gravity="center"
       android:text="@string/admin_page"
       android:textColor="#050505"
@@ -23,35 +23,9 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <Button
-      android:id="@+id/OrderHistoryButton"
-      android:layout_width="192dp"
-      android:layout_height="111dp"
-      android:layout_marginTop="216dp"
-      android:onClick="display_order_history"
-      android:text="@string/view_customer_order"
-      android:textSize="24sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.497"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-  <Button
-      android:id="@+id/UserInfoButton"
-      android:layout_width="192dp"
-      android:layout_height="111dp"
-      android:layout_marginTop="380dp"
-      android:onClick="display_user_info"
-      android:text="@string/view_customer_info"
-      android:textSize="24sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.497"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-  <Button
       android:id="@+id/EditMenuButton"
-      android:layout_width="192dp"
-      android:layout_height="111dp"
+      android:layout_width="200dp"
+      android:layout_height="100dp"
       android:onClick="edit_menu"
       android:text="@string/edit_menu_items"
       android:textSize="24sp"
@@ -59,29 +33,47 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.497"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.874"
-      />
+      app:layout_constraintTop_toBottomOf="@+id/adminPage"
+      app:layout_constraintVertical_bias="0.066" />
 
   <Button
-      android:id="@+id/goBack"
-      android:layout_width="170dp"
-      android:layout_height="67dp"
-      android:layout_marginTop="4dp"
-      android:background="#00FFFCFC"
-      android:onClick="goBack"
-      android:text="@string/back_to_login"
-      android:textColor="#100D0D"
-      android:textColorHighlight="#000000"
-      android:textSize="20sp"
-      android:textStyle="bold|italic"
-      app:icon="@android:drawable/ic_menu_revert"
-      app:iconSize="30dp"
-      app:iconTint="#070505"
+      android:id="@+id/OrderHistoryButton"
+      android:layout_width="200dp"
+      android:layout_height="100dp"
+      android:onClick="display_order_history"
+      android:text="@string/order_history"
+      android:textSize="24sp"
+      app:layout_constraintBottom_toTopOf="@+id/UserInfoButton"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.019"
+      app:layout_constraintHorizontal_bias="0.521"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toBottomOf="@+id/EditMenuButton" />
+
+  <Button
+      android:id="@+id/UserInfoButton"
+      android:layout_width="250dp"
+      android:layout_height="100dp"
+      android:onClick="display_user_info"
+      android:text="@string/user_information"
+      android:textSize="24sp"
+      app:layout_constraintBottom_toTopOf="@+id/logoutAdmin"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.808" />
+
+  <Button
+      android:id="@+id/logoutAdmin"
+      android:layout_width="125dp"
+      android:layout_height="60dp"
+      android:text="@string/logout"
+      android:textSize="18sp"
+      android:layout_marginBottom="48dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
