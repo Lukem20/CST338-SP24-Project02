@@ -8,7 +8,6 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.lumoore.bakeryapplication.LoginActivity;
-import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityUserPageBinding;
 
 public class UserActivity extends AppCompatActivity {
@@ -18,7 +17,7 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityUserPageBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_user_page);
+        setContentView(binding.getRoot());
 
         binding.FoodMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
