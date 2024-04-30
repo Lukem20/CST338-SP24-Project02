@@ -68,7 +68,7 @@
 
 
     <Button
-        android:id="@+id/logoutAdmin"
+        android:id="@+id/logoutUser"
         android:layout_width="125dp"
         android:layout_height="60dp"
         android:text="@string/logout"
