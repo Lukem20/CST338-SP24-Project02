@@ -1,14 +1,13 @@
-package com.lumoore.bakeryapplication;
+package com.lumoore.bakeryapplication.adminActivities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.lumoore.bakeryapplication.adminUserActivities.EditMenuActivity;
-import com.lumoore.bakeryapplication.adminUserActivities.OrderHistoryActivity;
-import com.lumoore.bakeryapplication.adminUserActivities.UserInformationActivity;
+import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityAdminPageBinding;
 
 public class AdminActivity extends AppCompatActivity {
@@ -45,6 +44,11 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
     }
+
+    public static Intent AdminIntentFactory(Context context) {
+        return new Intent(context, AdminActivity.class);
+    }
+
 
     public void edit_menu(View view) {
 

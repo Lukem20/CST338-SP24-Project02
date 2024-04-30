@@ -1,4 +1,4 @@
-package com.lumoore.bakeryapplication.adminUserActivities;
+package com.lumoore.bakeryapplication.adminActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

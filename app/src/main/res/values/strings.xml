@@ -16,5 +16,10 @@
     <string name="drink_page">Drink Menu</string>
     <string name="back_to_login">Back to Login</string>
     <string name="edit_menu_items">Edit Menu Items</string>
+    <string name="enter">Enter</string>
+    <string name="welcome_to_the_bakery_app">Welcome to the Bakery App!</string>
+    <string name="enter_a_name_password"><![CDATA[Enter a name & password]]></string>
+    <string name="re_enter_password">Re-enter password</string>
+    <string name="go_back">Go back</string>
 
 </resources>
