@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.lumoore.bakeryapplication.R;
-import com.lumoore.bakeryapplication.databinding.ActivityAdminPageBinding;
 import com.lumoore.bakeryapplication.databinding.ActivityEditMenuBinding;
 
 public class EditMenuActivity extends AppCompatActivity {
