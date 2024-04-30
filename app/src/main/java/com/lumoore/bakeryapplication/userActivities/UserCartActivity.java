@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.lumoore.bakeryapplication.R;
-import com.lumoore.bakeryapplication.databinding.ActivityLoginBinding;
 import com.lumoore.bakeryapplication.databinding.ActivityUserCartBinding;
 
 public class UserCartActivity extends AppCompatActivity {
