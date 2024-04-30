@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BakeryApplication"
         tools:targetApi="31">
         <activity
+            android:name=".CreateAccount"
+            android:exported="false" />
+        <activity
             android:name=".adminUserActivities.EditMenuActivity"
             android:exported="false" />
         <activity

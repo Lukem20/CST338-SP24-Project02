@@ -54,8 +54,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void loginUser(View view) {
         if (isValidFieldValue()) {
-            // Check if the value in 'username' exists in the database
-            // If it is already in database, check if the password matches that entry.
+            // TODO - Check if the value in 'username' exists in the database.
+            //  If it is already in database, check if the password matches that entry.
              if (true) { // IF USER IS ADMIN
                     Intent intent = AdminActivity.AdminIntentFactory(getApplicationContext());
                     startActivity(intent);
@@ -67,11 +67,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void createAccount(View view) {
-        if (isValidFieldValue()) {
-            // Check if the value in 'username' exists in the database
-            // If it is already in database, try again.
-            // Else add new entry to database with 'username' & 'password'
-        }
+        Intent intent = CreateAccount.CreateAccountIntentFactory(getApplicationContext());
+        startActivity(intent);
     }
 
     /**
@@ -80,10 +77,7 @@ public class LoginActivity extends AppCompatActivity {
      * @return true if valid, false if not
      */
     private boolean isValidFieldValue() {
-        if (!username.isEmpty() && !password.isEmpty()) {
-            return true;
-        }
-        return false;
+        return !username.isEmpty() && !password.isEmpty();
     }
 
     /**
