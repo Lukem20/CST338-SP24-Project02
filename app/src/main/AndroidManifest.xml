@@ -13,19 +13,28 @@
         android:theme="@style/Theme.BakeryApplication"
         tools:targetApi="31">
         <activity
-            android:name=".adminUserActivities.EditMenuActivity"
+            android:name=".adminActivities.EditDrinksMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".adminUserActivities.UserInformationActivity"
+            android:name=".adminActivities.EditFoodMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".adminUserActivities.OrderHistoryActivity"
+            android:name=".CreateAccount"
             android:exported="false" />
         <activity
-            android:name=".User_Menu"
+            android:name=".adminActivities.EditMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminActivity"
+            android:name=".adminActivities.UserInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adminActivities.OrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userActivities.UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adminActivities.AdminActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
