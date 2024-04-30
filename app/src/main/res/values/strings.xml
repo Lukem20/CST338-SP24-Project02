@@ -28,5 +28,6 @@
     <string name="edit_food_menu">Edit Food Menu</string>
     <string name="view_cart">View Cart</string>
     <string name="checkout">Checkout</string>
+    <string name="your_cart_items">Your cart items</string>
 
 </resources>

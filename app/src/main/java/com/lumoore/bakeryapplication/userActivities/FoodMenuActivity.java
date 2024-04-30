@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityFoodMenuBinding;
@@ -18,7 +19,13 @@ public class FoodMenuActivity extends AppCompatActivity {
         binding = ActivityFoodMenuBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_food_menu);
 
-
+        binding.goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
+                startActivity(intent);
+            }
+        });
     }
 
     public static Intent FoodMenuIntentFactory(Context context) {
