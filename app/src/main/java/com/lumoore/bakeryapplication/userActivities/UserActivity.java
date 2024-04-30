@@ -7,7 +7,6 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.lumoore.bakeryapplication.R;
-import com.lumoore.bakeryapplication.databinding.ActivityUserMenuBinding;
 import com.lumoore.bakeryapplication.databinding.ActivityUserPageBinding;
 
 public class UserActivity extends AppCompatActivity {
