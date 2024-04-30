@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityOrderHistoryBinding;
 
 public class OrderHistoryActivity extends AppCompatActivity {
@@ -18,7 +17,7 @@ public class OrderHistoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityOrderHistoryBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_order_history);
+        setContentView(binding.getRoot());
 
         binding.goBack.setOnClickListener(new View.OnClickListener() {
             @Override

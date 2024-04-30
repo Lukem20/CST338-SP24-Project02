@@ -22,13 +22,13 @@ public class CreateAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityCreateAccountBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_create_account);
+        setContentView(binding.getRoot());
 
         binding.createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (getEnteredLoginInformation()) {
-                    Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
+                    Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext(), 0);
                     startActivity(intent);
                 }
             }

@@ -8,17 +8,25 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.lumoore.bakeryapplication.LoginActivity;
-import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityUserPageBinding;
 
 public class UserActivity extends AppCompatActivity {
+    private static final String USER_ACTIVITY_USER_ID = "com.lumoore.bakeryapplication.userActivities.USER_ACTIVITY_USER_ID";
     private ActivityUserPageBinding binding;
+    int loggedInUserID = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityUserPageBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_user_page);
+        setContentView(binding.getRoot());
+
+        logInUser();
+
+        if(loggedInUserID == -1) {
+            Intent intent = LoginActivity.LoginIntentFactory(getApplicationContext());
+            startActivity(intent);
+        }
 
         binding.FoodMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,8 +69,15 @@ public class UserActivity extends AppCompatActivity {
         });
     }
 
-    public static Intent UserActivityIntentFactory(Context context) {
-        return new Intent(context, UserActivity.class);
+    private void logInUser() {
+        // TODO - Create login method.
+        loggedInUserID = getIntent().getIntExtra(USER_ACTIVITY_USER_ID, -1);
+    }
+
+    public static Intent UserActivityIntentFactory(Context context, int userID) {
+        Intent intent = new Intent(context, UserActivity.class);
+        intent.putExtra(USER_ACTIVITY_USER_ID, userID);
+        return intent;
     }
 
 //    private void logout() {

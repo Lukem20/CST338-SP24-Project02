@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityDrinksMenuBinding;
 
 public class DrinksMenuActivity extends AppCompatActivity {
@@ -17,7 +16,7 @@ public class DrinksMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityDrinksMenuBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_drinks_menu);
+        setContentView(binding.getRoot());
 
         binding.goBack.setOnClickListener(new View.OnClickListener() {
             @Override
