@@ -16,19 +16,19 @@
             android:name=".CreateAccount"
             android:exported="false" />
         <activity
-            android:name=".adminUserActivities.EditMenuActivity"
+            android:name=".adminActivities.EditMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".adminUserActivities.UserInformationActivity"
+            android:name=".adminActivities.UserInformationActivity"
             android:exported="false" />
         <activity
-            android:name=".adminUserActivities.OrderHistoryActivity"
+            android:name=".adminActivities.OrderHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".UserActivity"
+            android:name=".userActivities.UserActivity"
             android:exported="false" />
         <activity
-            android:name=".AdminActivity"
+            android:name=".adminActivities.AdminActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

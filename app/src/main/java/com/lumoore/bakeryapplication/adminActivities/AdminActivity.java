@@ -1,4 +1,4 @@
-package com.lumoore.bakeryapplication;
+package com.lumoore.bakeryapplication.adminActivities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,9 +7,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.lumoore.bakeryapplication.adminUserActivities.EditMenuActivity;
-import com.lumoore.bakeryapplication.adminUserActivities.OrderHistoryActivity;
-import com.lumoore.bakeryapplication.adminUserActivities.UserInformationActivity;
+import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityAdminPageBinding;
 
 public class AdminActivity extends AppCompatActivity {

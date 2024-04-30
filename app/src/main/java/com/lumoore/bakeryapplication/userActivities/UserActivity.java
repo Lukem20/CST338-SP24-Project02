@@ -1,4 +1,4 @@
-package com.lumoore.bakeryapplication;
+package com.lumoore.bakeryapplication.userActivities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityUserMenuBinding;
 import com.lumoore.bakeryapplication.databinding.ActivityUserPageBinding;
 

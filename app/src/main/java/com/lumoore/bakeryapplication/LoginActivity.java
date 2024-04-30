@@ -9,8 +9,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.PrimaryKey;
 
+import com.lumoore.bakeryapplication.adminActivities.AdminActivity;
 import com.lumoore.bakeryapplication.database.BakeryOrderRepository;
 import com.lumoore.bakeryapplication.databinding.ActivityLoginBinding;
+import com.lumoore.bakeryapplication.userActivities.UserActivity;
 
 public class LoginActivity extends AppCompatActivity {
     @PrimaryKey

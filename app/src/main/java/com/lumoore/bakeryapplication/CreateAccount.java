@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.lumoore.bakeryapplication.databinding.ActivityCreateAccountBinding;
+import com.lumoore.bakeryapplication.userActivities.UserActivity;
 
 public class CreateAccount extends AppCompatActivity {
     @PrimaryKey
