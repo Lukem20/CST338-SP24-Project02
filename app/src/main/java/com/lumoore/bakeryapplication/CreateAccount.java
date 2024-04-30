@@ -28,7 +28,7 @@ public class CreateAccount extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (getEnteredLoginInformation()) {
-                    Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
+                    Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext(), 0);
                     startActivity(intent);
                 }
             }
