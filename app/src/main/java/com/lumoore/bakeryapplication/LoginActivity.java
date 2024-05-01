@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = AdminActivity.AdminIntentFactory(getApplicationContext());
                     startActivity(intent);
              } else {
-                    Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
+                    Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext(), 0);
                     startActivity(intent);
             }
         }

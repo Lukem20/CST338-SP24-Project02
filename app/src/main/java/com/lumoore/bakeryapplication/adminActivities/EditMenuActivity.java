@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityEditMenuBinding;
 
 public class EditMenuActivity extends AppCompatActivity {
@@ -18,7 +17,7 @@ public class EditMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityEditMenuBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_edit_menu);
+        setContentView(binding.getRoot());
 
         binding.FoodMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
