@@ -2,18 +2,25 @@ package com.lumoore.bakeryapplication.userActivities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.lumoore.bakeryapplication.LoginActivity;
+import com.lumoore.bakeryapplication.database.BakeryOrderRepository;
 import com.lumoore.bakeryapplication.databinding.ActivityUserPageBinding;
 
 public class UserActivity extends AppCompatActivity {
     private static final String USER_ACTIVITY_USER_ID = "com.lumoore.bakeryapplication.userActivities.USER_ACTIVITY_USER_ID";
+    public static final int LOGGED_OUT = -1;
+    public static final String SHARED_PREFERENCE_USERID_KEY = "com.lumoore.bakeryapplication.SHARED_PREFERENCE_USERID_KEY";
+    public static final String SHARED_PREFERENCE_USERID_VALUE = "com.lumoore.bakeryapplication.SHARED_PREFERENCE_USERID_VALUE";
+
     private ActivityUserPageBinding binding;
-    int loggedInUserID = -1;
+    private BakeryOrderRepository repository;
+    int loggedInUserID = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +31,10 @@ public class UserActivity extends AppCompatActivity {
         logInUser();
 
         if(loggedInUserID == -1) {
-            Intent intent = LoginActivity.LoginIntentFactory(getApplicationContext());
-            startActivity(intent);
+            logoutUser();
         }
+
+        repository = BakeryOrderRepository.getRepository(getApplication());
 
         binding.FoodMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,8 +78,26 @@ public class UserActivity extends AppCompatActivity {
     }
 
     private void logInUser() {
-        // TODO - Create login method.
-        loggedInUserID = getIntent().getIntExtra(USER_ACTIVITY_USER_ID, -1);
+        // Check shared preference for logged in user
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(SHARED_PREFERENCE_USERID_KEY, Context.MODE_PRIVATE);
+        loggedInUserID = sharedPreferences.getInt(SHARED_PREFERENCE_USERID_VALUE, LOGGED_OUT);
+        if (loggedInUserID != LOGGED_OUT) {
+            return;
+        }
+
+        // Check intent for logged in user
+        loggedInUserID = getIntent().getIntExtra(USER_ACTIVITY_USER_ID, LOGGED_OUT);
+    }
+
+    private void logoutUser() {
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(SHARED_PREFERENCE_USERID_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(SHARED_PREFERENCE_USERID_KEY, LOGGED_OUT);
+        editor.apply();
+
+        getIntent().putExtra(USER_ACTIVITY_USER_ID, LOGGED_OUT);
+
+        startActivity(LoginActivity.LoginIntentFactory(getApplicationContext()));
     }
 
     public static Intent UserActivityIntentFactory(Context context, int userID) {
@@ -81,7 +107,6 @@ public class UserActivity extends AppCompatActivity {
     }
 
 //    private void logout() {
-//        SharedPreferences.Editor editor = sharedPreferences.edit();
 //        editor.remove("isAdmin");
 //        editor.apply();
 //        Intent intent = new Intent(this, MainActivity.class);
@@ -89,4 +114,5 @@ public class UserActivity extends AppCompatActivity {
 //        startActivity(intent);
 //        finish();
 //    }
+
 }
