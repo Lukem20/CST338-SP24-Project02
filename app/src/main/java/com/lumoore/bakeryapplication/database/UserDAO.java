@@ -24,5 +24,6 @@ public interface UserDAO {
     @Query("DELETE from " + BakeryOrderDatabase.USER_TABLE)
     void deleteAll();
 
-    @Query("SELECT * from " + BakeryOrderDatabase.USER_TABLE + " WHERE username == :username") User getUserByUsername(String username);
+    @Query("SELECT * from " + BakeryOrderDatabase.USER_TABLE + " WHERE username == :username")
+    User getUserByUsername(String username);
 }
