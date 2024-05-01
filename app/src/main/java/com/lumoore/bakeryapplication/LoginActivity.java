@@ -2,6 +2,7 @@ package com.lumoore.bakeryapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -21,7 +22,6 @@ public class LoginActivity extends AppCompatActivity {
     String password = "";
     private ActivityLoginBinding binding;
     private BakeryOrderRepository repository;
-
     private User user = null;
 
 
@@ -87,12 +87,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser(User user) {
-         if (user.isAdmin()) {
-                Intent intent = AdminActivity.AdminIntentFactory(getApplicationContext());
-                startActivity(intent);
-         } else {
-                Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext(), user.getId());
-                startActivity(intent);
+        if (user.isAdmin()) {
+            Intent intent = AdminActivity.AdminIntentFactory(getApplicationContext());
+            startActivity(intent);
+        } else {
+            SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(UserActivity.SHARED_PREFERENCE_USERID_KEY, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt(UserActivity.SHARED_PREFERENCE_USERID_KEY, UserActivity.LOGGED_OUT);
+            editor.apply();
+
+             Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext(), user.getId());
+             startActivity(intent);
         }
     }
 
