@@ -3,6 +3,7 @@ package com.lumoore.bakeryapplication.database;
 import android.app.Application;
 import android.util.Log;
 
+import com.lumoore.bakeryapplication.MainActivity;
 import com.lumoore.bakeryapplication.database.entities.BakeryOrder;
 import com.lumoore.bakeryapplication.database.entities.User;
 
@@ -83,5 +84,25 @@ public class BakeryOrderRepository {
         BakeryOrderDatabase.dbWriteExecutor.execute(() -> {
             userDAO.insert(user);
         });
+    }
+
+    public User getUserbyUserName(String username) {
+        Future<User> future = BakeryOrderDatabase.dbWriteExecutor.submit(
+            new Callable<User>() {
+                @Override
+                public User call() throws Exception {
+                    return userDAO.getUserByUsername(username);
+                }
+            });
+        try {
+            future.get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+            Log.i(MainActivity.TAG, "Failed to get all records from bakeryDAO, problem with executor");
+        }
+
+        // Better idea to return an empty Bakery object, but good for now.
+        return null;
+    }
     }
 }

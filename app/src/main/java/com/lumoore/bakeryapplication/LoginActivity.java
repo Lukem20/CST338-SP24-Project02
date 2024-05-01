@@ -11,6 +11,7 @@ import androidx.room.PrimaryKey;
 
 import com.lumoore.bakeryapplication.adminActivities.AdminActivity;
 import com.lumoore.bakeryapplication.database.BakeryOrderRepository;
+import com.lumoore.bakeryapplication.database.entities.User;
 import com.lumoore.bakeryapplication.databinding.ActivityLoginBinding;
 import com.lumoore.bakeryapplication.userActivities.UserActivity;
 
@@ -34,9 +35,12 @@ public class LoginActivity extends AppCompatActivity {
         binding.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this, "Login button", Toast.LENGTH_SHORT).show();
-                getEnteredLoginInformation();
-                loginUser(v);
+                if(!verifyuser()) {
+                    Toast.makeText(LoginActivity.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                } else {
+                    getEnteredLoginInformation();
+                    loginUser(v);
+                }
             }
         });
 
@@ -48,6 +52,10 @@ public class LoginActivity extends AppCompatActivity {
                 createAccount(v);
             }
         });
+    }
+
+    private void verifyUser() {
+        User user = repository.getUserbyUserName();
     }
 
     public static Intent LoginIntentFactory(Context context) {
