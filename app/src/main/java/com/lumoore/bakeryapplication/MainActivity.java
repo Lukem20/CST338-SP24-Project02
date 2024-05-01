@@ -11,6 +11,7 @@ import com.lumoore.bakeryapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String TAG = "";
     private ActivityMainBinding binding;
 
     @Override
@@ -28,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public static Intent MainIntentFactory(Context context) {
+    public static Intent MainIntentFactory(Context context, int userID) {
+        userID = 0;
         return new Intent(context, MainActivity.class);
     }
 

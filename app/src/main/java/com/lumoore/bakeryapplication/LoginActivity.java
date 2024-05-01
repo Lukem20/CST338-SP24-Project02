@@ -11,6 +11,7 @@ import androidx.room.PrimaryKey;
 
 import com.lumoore.bakeryapplication.adminActivities.AdminActivity;
 import com.lumoore.bakeryapplication.database.BakeryOrderRepository;
+import com.lumoore.bakeryapplication.database.entities.User;
 import com.lumoore.bakeryapplication.databinding.ActivityLoginBinding;
 import com.lumoore.bakeryapplication.userActivities.UserActivity;
 
@@ -20,6 +21,8 @@ public class LoginActivity extends AppCompatActivity {
     String password = "";
     private ActivityLoginBinding binding;
     private BakeryOrderRepository repository;
+
+    private User user = null;
 
 
     @Override
@@ -34,20 +37,50 @@ public class LoginActivity extends AppCompatActivity {
         binding.loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this, "Login button", Toast.LENGTH_SHORT).show();
-                getEnteredLoginInformation();
-                loginUser(v);
+                if(!verifyUser()) {
+                    toastMaker("Invalid credentials");
+                } else {
+                    Intent intent = MainActivity.MainIntentFactory(getApplicationContext(), user.getId());
+//                    getEnteredLoginInformation();
+//                    loginUser(v);
+                }
             }
         });
 
         binding.createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(LoginActivity.this, "Create Account button", Toast.LENGTH_SHORT).show();
+                toastMaker("Create account button");
                 getEnteredLoginInformation();
                 createAccount(v);
             }
         });
+    }
+
+    private boolean verifyUser() {
+
+        String username = binding.userEdit.getText().toString();
+        if(username.isEmpty()) {
+            toastMaker("username should not be blank");
+            return false;
+        }
+        user = repository.getUserbyUserName(username);
+        if (user != null) {
+            String password = binding.passEdit.getText().toString();
+            if (password.equals(user.getPassword())) {
+                return true;
+            } else {
+                toastMaker("invalid password");
+                return false;
+            }
+        }
+        toastMaker(String.format("No %s found"
+        ,username));
+        return false;
+    }
+
+    public void toastMaker (String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     public static Intent LoginIntentFactory(Context context) {
