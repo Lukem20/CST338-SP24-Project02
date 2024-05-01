@@ -8,7 +8,6 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.lumoore.bakeryapplication.LoginActivity;
-import com.lumoore.bakeryapplication.R;
 import com.lumoore.bakeryapplication.databinding.ActivityAdminPageBinding;
 
 public class AdminActivity extends AppCompatActivity {
@@ -19,7 +18,7 @@ public class AdminActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityAdminPageBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_admin_page);
+        setContentView(binding.getRoot());
 
         binding.OrderHistoryButton.setOnClickListener(new View.OnClickListener() {
             @Override
