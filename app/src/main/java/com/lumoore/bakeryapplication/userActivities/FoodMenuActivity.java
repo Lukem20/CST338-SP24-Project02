@@ -21,7 +21,7 @@ public class FoodMenuActivity extends AppCompatActivity {
         binding.goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
+                Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext(), 0);
                 startActivity(intent);
             }
         });
