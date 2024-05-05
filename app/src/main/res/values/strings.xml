@@ -13,6 +13,12 @@
     <string name="logout">Logout</string>
     <string name="food_page">Food Menu</string>
     <string name="drink_page">Drink Menu</string>
+    <string name="bread_page">Breads Menu</string>
+    <string name="cake_page">Cakes Menu</string>
+    <string name="pastries_page">Pastries Menu</string>
+    <string name="coffee_page">Coffee Menu</string>
+    <string name="tea_page">Tea Menu</string>
+    <string name="juice_page">Juice Menu</string>
     <string name="back_to_login">Back to Login</string>
     <string name="edit_menu_items">Edit Menu Items</string>
     <string name="enter">Enter</string>
@@ -29,5 +35,6 @@
     <string name="view_cart">View Cart</string>
     <string name="checkout">Checkout</string>
     <string name="your_cart_items">Your cart items</string>
-
+    <string name="choice_food">Choose a food menu.</string>
+    <string name="choice_drink">Choose a drink menu.</string>
 </resources>
