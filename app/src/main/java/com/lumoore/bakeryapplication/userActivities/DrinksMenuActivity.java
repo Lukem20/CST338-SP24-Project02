@@ -7,15 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.lumoore.bakeryapplication.databinding.ActivityDrinksMenuBinding;
+import com.lumoore.bakeryapplication.databinding.ActivityDrinksMenuChoiceBinding;
 
 public class DrinksMenuActivity extends AppCompatActivity {
-    private ActivityDrinksMenuBinding binding;
+    private ActivityDrinksMenuChoiceBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityDrinksMenuBinding.inflate(getLayoutInflater());
+        binding = ActivityDrinksMenuChoiceBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.goBack.setOnClickListener(new View.OnClickListener() {
