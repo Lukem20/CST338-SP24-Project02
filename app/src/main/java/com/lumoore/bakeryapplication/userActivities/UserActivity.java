@@ -1,5 +1,6 @@
 package com.lumoore.bakeryapplication.userActivities;
 
+import android.app.MediaRouteButton;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +10,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.lumoore.bakeryapplication.LoginActivity;
+import com.lumoore.bakeryapplication.adminActivities.AdminActivity;
 import com.lumoore.bakeryapplication.database.BakeryOrderRepository;
 import com.lumoore.bakeryapplication.databinding.ActivityUserPageBinding;
 
@@ -60,6 +62,14 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
+        binding.bAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = AdminActivity.AdminIntentFactory(getApplicationContext());
+                startActivity(intent);
+            }
+        });
+
         binding.CheckoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +108,13 @@ public class UserActivity extends AppCompatActivity {
         getIntent().putExtra(USER_ACTIVITY_USER_ID, LOGGED_OUT);
 
         startActivity(LoginActivity.LoginIntentFactory(getApplicationContext()));
+    }
+
+      if (isAdmin) {
+        bAdmin.setVisibility(View.VISIBLE);
+    } else {
+        MediaRouteButton bAdmin;
+        bAdmin.setVisibility(View.GONE);
     }
 
     public static Intent UserActivityIntentFactory(Context context, int userID) {

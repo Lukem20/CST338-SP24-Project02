@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.lumoore.bakeryapplication.LoginActivity;
 import com.lumoore.bakeryapplication.databinding.ActivityAdminPageBinding;
+import com.lumoore.bakeryapplication.userActivities.UserActivity;
 
 public class AdminActivity extends AppCompatActivity {
 
@@ -44,10 +45,10 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
 
-        binding.logoutAdmin.setOnClickListener(new View.OnClickListener() {
+        binding.goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = LoginActivity.LoginIntentFactory(getApplicationContext());
+                Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
                 startActivity(intent);
             }
         });
