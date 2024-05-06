@@ -18,6 +18,14 @@ public class UserCartActivity extends AppCompatActivity {
         binding = ActivityUserCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.gTCheckout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = CheckoutActivity.CheckoutIntentFactory(getApplicationContext());
+                startActivity(intent);
+            }
+        });
+
         binding.goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

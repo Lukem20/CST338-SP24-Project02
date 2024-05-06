@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
 
 import com.lumoore.bakeryapplication.LoginActivity;
 import com.lumoore.bakeryapplication.adminActivities.AdminActivity;
@@ -28,12 +29,6 @@ public class UserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityUserPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        logInUser();
-
-        if(loggedInUserID == -1) {
-            logoutUser();
-        }
 
         repository = BakeryOrderRepository.getRepository(getApplication());
 
