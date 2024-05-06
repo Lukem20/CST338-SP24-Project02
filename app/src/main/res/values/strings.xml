@@ -55,5 +55,8 @@
     <string name="jasmine">Jasmine</string>
     <string name="drip_coffee">Drip Coffee</string>
     <string name="latte">Latte</string>
+    <string name="dutch_crunch">Dutch Crunch</string>
+    <string name="sourdough">Sourdough</string>
+    <string name="ciabatta">Ciabatta</string>
 
 </resources>
