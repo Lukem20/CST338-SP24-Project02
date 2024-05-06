@@ -50,5 +50,8 @@
     <string name="swedish_butterkaka">Swedish Butterkaka</string>
     <string name="cannoli">Cannoli</string>
     <string name="add_to_cart">Add to Cart</string>
+    <string name="chai_latte">Chai Latte</string>
+    <string name="thai_milk_tea">Thai Milk Tea</string>
+    <string name="jasmine">Jasmine</string>
 
 </resources>

@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="@string/almond_bear_claw"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/AlmondBearClawSeekBar"
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,87 +38,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PastriesMenuTextView" />
 
-    <TextView
-        android:id="@+id/ButterkakaTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/swedish_butterkaka"
-        app:layout_constraintEnd_toStartOf="@+id/ButterkakaSeekBar"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AlmondBearClawTextView" />
-
-    <SeekBar
-        android:id="@+id/ButterkakaSeekBar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AlmondBearClawSeekBar" />
-
-    <TextView
-        android:id="@+id/CannoliTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/cannoli"
-        app:layout_constraintEnd_toStartOf="@+id/CannoliSeekBar"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButterkakaTextView" />
-
-    <SeekBar
-        android:id="@+id/CannoliSeekBar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ButterkakaSeekBar" />
-
-    <TextView
-        android:id="@+id/CroissantTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/cannoli"
-        app:layout_constraintEnd_toStartOf="@+id/CroissantSeekBar"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CannoliTextView" />
-
-    <SeekBar
-        android:id="@+id/CroissantSeekBar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CannoliSeekBar" />
-
-    <TextView
-        android:id="@+id/EmpanadaTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/cannoli"
-        app:layout_constraintEnd_toStartOf="@+id/EmpanadaSeekBar"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CroissantTextView" />
-
-    <SeekBar
-        android:id="@+id/EmpanadaSeekBar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CroissantSeekBar" />
 
     <Button
+        android:id="@+id/PastryCheckoutButton"
         android:layout_width="160dp"
         android:layout_height="70dp"
         android:text="@string/add_to_cart"
@@ -125,7 +48,7 @@
         app:layout_constraintBottom_toTopOf="@+id/goBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EmpanadaTextView" />
+         />
 
 
     <Button
