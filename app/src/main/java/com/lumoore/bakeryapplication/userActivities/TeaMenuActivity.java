@@ -31,6 +31,10 @@ public class TeaMenuActivity extends AppCompatActivity {
             }
         });
 
+        SeekBar chaiSeekBar = binding.ChaiSeekBar;
+        chaiSeekBar.setProgress(0);
+        chaiSeekBar.incrementProgressBy(1);
+        chaiSeekBar.setMax(10);
         binding.ChaiSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
@@ -45,6 +49,10 @@ public class TeaMenuActivity extends AppCompatActivity {
                 }
         );
 
+        SeekBar thaiTeaSeekBar = binding.ThaiTeaSeekBar;
+        thaiTeaSeekBar.setProgress(0);
+        thaiTeaSeekBar.incrementProgressBy(1);
+        thaiTeaSeekBar.setMax(10);
         binding.ThaiTeaSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
@@ -59,6 +67,10 @@ public class TeaMenuActivity extends AppCompatActivity {
                 }
         );
 
+        SeekBar jasmineTeaSeekBar = binding.JasmineTeaSeekBar;
+        jasmineTeaSeekBar.setProgress(0);
+        jasmineTeaSeekBar.incrementProgressBy(1);
+        jasmineTeaSeekBar.setMax(10);
         binding.JasmineTeaSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override

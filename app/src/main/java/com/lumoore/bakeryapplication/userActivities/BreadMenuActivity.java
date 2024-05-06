@@ -22,6 +22,10 @@ public class BreadMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
 
+        SeekBar csb = binding.CiabattaSeekBar;
+        csb.setProgress(0);
+        csb.incrementProgressBy(1);
+        csb.setMax(10);
         binding.CiabattaSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
@@ -36,6 +40,10 @@ public class BreadMenuActivity extends AppCompatActivity {
                 }
         );
 
+        SeekBar ssb = binding.SourdoughSeekBar;
+        ssb.setProgress(0);
+        ssb.incrementProgressBy(1);
+        ssb.setMax(10);
         binding.SourdoughSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
@@ -50,6 +58,10 @@ public class BreadMenuActivity extends AppCompatActivity {
                 }
         );
 
+        SeekBar dcsb = binding.DutchCrunchSeekBar;
+        dcsb.setProgress(0);
+        dcsb.incrementProgressBy(1);
+        dcsb.setMax(10);
         binding.DutchCrunchSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override

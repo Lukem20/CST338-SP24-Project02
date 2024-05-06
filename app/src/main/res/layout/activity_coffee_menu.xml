@@ -7,7 +7,7 @@
     tools:context=".userActivities.DrinksMenuActivity">
 
     <TextView
-        android:id="@+id/DrinksMenuTextView"
+        android:id="@+id/CoffeeMenuTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/coffees"
@@ -27,7 +27,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/DripCoffeeSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DrinksMenuTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/CoffeeMenuTextView" />
 
     <SeekBar
         android:id="@+id/DripCoffeeSeekBar"
@@ -36,7 +36,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DrinksMenuTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/CoffeeMenuTextView" />
 
     <TextView
         android:id="@+id/LatteTextView"
@@ -59,13 +59,14 @@
         app:layout_constraintTop_toBottomOf="@+id/DripCoffeeSeekBar" />
 
     <TextView
-        android:id="@+id/CuppaccinoTextView"
+        android:id="@+id/CappuccinoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/latte"
+        android:layout_marginTop="56dp"
+        android:text="@string/cappuccino"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/CappuccinoSeekBar"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LatteTextView" />
 

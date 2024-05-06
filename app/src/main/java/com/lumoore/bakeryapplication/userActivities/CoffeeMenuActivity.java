@@ -22,6 +22,10 @@ public class CoffeeMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
 
+        SeekBar dcsb = binding.DripCoffeeSeekBar;
+        dcsb.setProgress(0);
+        dcsb.incrementProgressBy(1);
+        dcsb.setMax(10);
         binding.DripCoffeeSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
@@ -36,6 +40,10 @@ public class CoffeeMenuActivity extends AppCompatActivity {
                 }
         );
 
+        SeekBar latteSeekBar = binding.LatteSeekBar;
+        latteSeekBar.setProgress(0);
+        latteSeekBar.incrementProgressBy(1);
+        latteSeekBar.setMax(10);
         binding.LatteSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
@@ -50,11 +58,15 @@ public class CoffeeMenuActivity extends AppCompatActivity {
                 }
         );
 
+        SeekBar cappuccinoSeekBar = binding.CappuccinoSeekBar;
+        cappuccinoSeekBar.setProgress(0);
+        cappuccinoSeekBar.incrementProgressBy(1);
+        cappuccinoSeekBar.setMax(10);
         binding.CappuccinoSeekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                        String item = binding.CuppaccinoTextView.getText().toString();
+                        String item = binding.CappuccinoTextView.getText().toString();
                         items.put(item, progress);
                     }
                     @Override
