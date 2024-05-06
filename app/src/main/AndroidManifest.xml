@@ -13,6 +13,9 @@
         android:theme="@style/Theme.BakeryApplication"
         tools:targetApi="31">
         <activity
+            android:name=".userActivities.CoffeeMenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".userActivities.TeaMenuActivity"
             android:exported="false" />
         <activity

@@ -53,5 +53,7 @@
     <string name="chai_latte">Chai Latte</string>
     <string name="thai_milk_tea">Thai Milk Tea</string>
     <string name="jasmine">Jasmine</string>
+    <string name="drip_coffee">Drip Coffee</string>
+    <string name="latte">Latte</string>
 
 </resources>
