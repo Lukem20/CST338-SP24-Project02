@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userActivities.DrinksMenuActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/CoffeeMenuTextView"
+        android:id="@+id/CakesMenuTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/coffees"
+        android:text="@string/cakes"
         android:textSize="24sp"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,65 +17,64 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/DripCoffeeTextView"
+        android:id="@+id/ChocolateCakeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="@string/drip_coffee"
+        android:text="@string/chocolate_cake"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/DripCoffeeSeekBar"
+        app:layout_constraintEnd_toStartOf="@+id/ChocolateCakeSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CoffeeMenuTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/CakesMenuTextView" />
 
     <SeekBar
-        android:id="@+id/DripCoffeeSeekBar"
+        android:id="@+id/ChocolateCakeSeekBar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CoffeeMenuTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/CakesMenuTextView" />
 
     <TextView
-        android:id="@+id/LatteTextView"
+        android:id="@+id/RedVelvetCakeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="@string/latte"
+        android:text="Red Velvet Cake"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/LatteSeekBar"
+        app:layout_constraintEnd_toStartOf="@+id/RedVelvetCakeSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DripCoffeeTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/ChocolateCakeTextView" />
 
     <SeekBar
-        android:id="@+id/LatteSeekBar"
+        android:id="@+id/RedVelvetCakeSeekBar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DripCoffeeSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/ChocolateCakeSeekBar" />
 
     <TextView
-        android:id="@+id/CappuccinoTextView"
+        android:id="@+id/CarrotCakeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="@string/cappuccino"
+        android:layout_marginTop="60dp"
+        android:text="Carrot Cake"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/CappuccinoSeekBar"
-        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintEnd_toStartOf="@+id/CarrotCakeSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LatteTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/RedVelvetCakeTextView" />
 
     <SeekBar
-        android:id="@+id/CappuccinoSeekBar"
+        android:id="@+id/CarrotCakeSeekBar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LatteSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/RedVelvetCakeSeekBar" />
 
     <Button
         android:id="@+id/goBack"

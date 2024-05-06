@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userActivities.DrinksMenuActivity">
+    tools:context=".userActivities.FoodMenuActivity">
 
     <TextView
-        android:id="@+id/CoffeeMenuTextView"
+        android:id="@+id/BreadsMenuTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/coffees"
+        android:text="@string/breads"
         android:textSize="24sp"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,65 +19,64 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/DripCoffeeTextView"
+        android:id="@+id/CiabattaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/drip_coffee"
+        android:text="@string/ciabatta"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/DripCoffeeSeekBar"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/CiabattaSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CoffeeMenuTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/BreadsMenuTextView" />
 
     <SeekBar
-        android:id="@+id/DripCoffeeSeekBar"
+        android:id="@+id/CiabattaSeekBar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CoffeeMenuTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/BreadsMenuTextView" />
 
     <TextView
-        android:id="@+id/LatteTextView"
+        android:id="@+id/SourdoughTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/latte"
+        android:text="@string/sourdough"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/LatteSeekBar"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/SourdoughSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DripCoffeeTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/CiabattaTextView" />
 
     <SeekBar
-        android:id="@+id/LatteSeekBar"
+        android:id="@+id/SourdoughSeekBar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DripCoffeeSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/CiabattaSeekBar" />
 
     <TextView
-        android:id="@+id/CappuccinoTextView"
+        android:id="@+id/DutchCrunchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="@string/cappuccino"
+        android:text="@string/dutch_crunch"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/CappuccinoSeekBar"
-        app:layout_constraintHorizontal_bias="0.902"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/DutchCrunchSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LatteTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/SourdoughTextView" />
 
     <SeekBar
-        android:id="@+id/CappuccinoSeekBar"
+        android:id="@+id/DutchCrunchSeekBar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LatteSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/SourdoughSeekBar" />
 
     <Button
         android:id="@+id/goBack"

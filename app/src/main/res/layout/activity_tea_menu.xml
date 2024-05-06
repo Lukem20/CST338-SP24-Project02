@@ -1,83 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".userActivities.DrinksMenuActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/CoffeeMenuTextView"
+        android:id="@+id/DrinksMenuTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/coffees"
+        android:text="@string/teas"
         android:textSize="24sp"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/DripCoffeeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/drip_coffee"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/DripCoffeeSeekBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CoffeeMenuTextView" />
-
-    <SeekBar
-        android:id="@+id/DripCoffeeSeekBar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CoffeeMenuTextView" />
-
-    <TextView
-        android:id="@+id/LatteTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="@string/latte"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/LatteSeekBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DripCoffeeTextView" />
-
-    <SeekBar
-        android:id="@+id/LatteSeekBar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DripCoffeeSeekBar" />
-
-    <TextView
-        android:id="@+id/CappuccinoTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="@string/cappuccino"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/CappuccinoSeekBar"
-        app:layout_constraintHorizontal_bias="0.902"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LatteTextView" />
-
-    <SeekBar
-        android:id="@+id/CappuccinoSeekBar"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LatteSeekBar" />
 
     <Button
         android:id="@+id/goBack"
@@ -90,5 +28,65 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ChaiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/chai_latte"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/ChaiSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DrinksMenuTextView" />
+
+    <SeekBar
+        android:id="@+id/ChaiSeekBar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DrinksMenuTextView" />
+
+    <TextView
+        android:id="@+id/ThaiTeaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/thai_milk_tea"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/ThaiTeaSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChaiTextView" />
+
+    <SeekBar
+        android:id="@+id/ThaiTeaSeekBar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChaiSeekBar" />
+
+    <TextView
+        android:id="@+id/JasmineTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/jasmine"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/JasmineTeaSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ThaiTeaTextView" />
+
+    <SeekBar
+        android:id="@+id/JasmineTeaSeekBar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ThaiTeaSeekBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
