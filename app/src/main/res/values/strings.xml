@@ -41,5 +41,14 @@
     <string name="payment">Enter a payment method:</string>
     <string name="order">order</string>
     <string name="gTCheckout">Proceed to checkout</string>
+    <string name="breads">Breads</string>
+    <string name="cakes">Cakes</string>
+    <string name="coffees">Coffees</string>
+    <string name="teas">Teas</string>
+    <string name="pastries">Pastries</string>
+    <string name="almond_bear_claw">Almond Bear Claw</string>
+    <string name="swedish_butterkaka">Swedish Butterkaka</string>
+    <string name="cannoli">Cannoli</string>
+    <string name="add_to_cart">Add to Cart</string>
 
 </resources>
