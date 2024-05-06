@@ -38,7 +38,7 @@ public class CreateAccount extends AppCompatActivity {
             public void onClick(View v) {
                 getEnteredLoginInformation();
                 if (verifyUsername() && verifyPassword()) {
-                    Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext(), 0);
+                    Intent intent = LoginActivity.LoginIntentFactory(getApplicationContext());
                     startActivity(intent);
                 }
             }

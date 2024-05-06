@@ -47,11 +47,9 @@ public class LoginActivity extends AppCompatActivity {
         binding.createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toastMaker("Create account button");
                 getEnteredLoginInformation();
-                if (isValidFieldValue()) {
-                    createAccount();
-                }
+                    Intent intent = CreateAccount.CreateAccountIntentFactory(getApplicationContext());
+                    startActivity(intent);
             }
         });
     }
@@ -101,17 +99,12 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private void createAccount() {
-        Intent intent = CreateAccount.CreateAccountIntentFactory(getApplicationContext());
-        startActivity(intent);
-    }
 
     /**
      *  Checks if the values that were entered and stored in Username & Password text fields are valid
      * @return true if valid, false if not
      */
     private boolean isValidFieldValue() {
-        toastMaker("Please enter Username and password");
         return !username.isEmpty() && !password.isEmpty();
     }
 

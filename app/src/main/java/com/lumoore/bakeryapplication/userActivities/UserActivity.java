@@ -1,6 +1,5 @@
 package com.lumoore.bakeryapplication.userActivities;
 
-import android.app.MediaRouteButton;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -62,7 +61,7 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
-        binding.bAdmin.setOnClickListener(new View.OnClickListener() {
+        binding.adminSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = AdminActivity.AdminIntentFactory(getApplicationContext());
@@ -110,12 +109,6 @@ public class UserActivity extends AppCompatActivity {
         startActivity(LoginActivity.LoginIntentFactory(getApplicationContext()));
     }
 
-      if (isAdmin) {
-        bAdmin.setVisibility(View.VISIBLE);
-    } else {
-        MediaRouteButton bAdmin;
-        bAdmin.setVisibility(View.GONE);
-    }
 
     public static Intent UserActivityIntentFactory(Context context, int userID) {
         Intent intent = new Intent(context, UserActivity.class);

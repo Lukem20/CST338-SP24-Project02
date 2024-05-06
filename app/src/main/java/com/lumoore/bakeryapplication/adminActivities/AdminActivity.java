@@ -45,13 +45,13 @@ public class AdminActivity extends AppCompatActivity {
             }
         });
 
-        binding.goBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
-                startActivity(intent);
-            }
-        });
+//        binding.goBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = UserActivity.UserActivityIntentFactory(getApplicationContext());
+//                startActivity(intent);
+//            }
+//        });
     }
 
     public static Intent AdminIntentFactory(Context context) {
