@@ -37,4 +37,9 @@
     <string name="your_cart_items">Your cart items</string>
     <string name="choice_food">Choose a food menu.</string>
     <string name="choice_drink">Choose a drink menu.</string>
+    <string name="address">Enter a delivery address:</string>
+    <string name="payment">Enter a payment method:</string>
+    <string name="order">order</string>
+    <string name="gTCheckout">Proceed to checkout</string>
+
 </resources>

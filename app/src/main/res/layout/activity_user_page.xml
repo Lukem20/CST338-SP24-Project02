@@ -80,12 +80,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/bAdmin"
+        android:id="@+id/adminSettings"
         android:layout_width="145dp"
         android:layout_height="64dp"
         android:layout_marginTop="4dp"
         android:text="@string/admin_page"
-        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
